@@ -120,7 +120,7 @@ BEGIN {
 /\*\*/ {
 	while (match($0, /\*\*/) != 0) {
 		if (env == "emph") {
-			sub(//, "</emph>");
+			sub(/\*\*/, "</emph>");
 			env = peenv;
 		}
 		else {
